@@ -28,7 +28,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
 
     // Operaciones del inventario protegidas
-    Route::apiResource('producto', ProductoController::class);
+    Route::apiResource('productos', ProductoController::class)->names('api.productos');
     Route::apiResource('empleado', EmpleadoController::class);
 });
 
